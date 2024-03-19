@@ -1,0 +1,41 @@
+<div class="flex h-full w-full pt-7 pl-7 pr-7 pb-5">
+    <div class="w-full h-full flex flex-col items-center">
+      <h2 class="text-xl text-slate-800 font-nunito tracking-tight font-semibold">Registro de convocatoria</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full h-3/5 pt-5">
+        <p class="text-xs font-nunito font-medium text-gray-400 pb-2">Selección pastores</p>
+
+        <select formControlName="pastor" (change)="setPastor()" class="flex w-full h-12 border-2 border-slate-300 rounded-xl pl-5
+            text-xs text-slate-800 font-nunito tracking-tight font-light" name="" id="pastors">
+          <option value = "">Elige una opción</option>
+          <option  *ngFor="let pastor of pastors" >{{pastor.name}}</option>
+        </select>
+
+        <div class="flex flex-col w-full  pt-3">
+          <p class="text-xs font-nunito font-medium text-gray-400 pb-2">Selecciona un equipo</p>
+
+          <select formControlName="team" (change)="getLeader()" class="flex w-full h-12 border-2 border-slate-300 rounded-xl pl-5
+            text-xs text-slate-800 font-nunito tracking-tight font-light" name="" id="teams">
+            <option value = "">Selecciona el equipo al que perteneces</option>
+            <option *ngFor="let team of teams" >{{team.name}}</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col w-full pt-3">
+          <p class="text-xs font-nunito font-medium text-gray-400 pb-2">Selecciona un líder</p>
+
+          <select formControlName="lider" class="flex w-full h-12 border-2 border-slate-300 rounded-xl pl-5
+            text-xs text-slate-800 font-nunito tracking-tight font-light" name="" id="lideres">
+            <option value = "">Selecciona el líder</option>
+            <option *ngFor="let leader of leaders" >{{ leader }}</option>
+          </select>
+        </div>
+
+        <div class="flex-col flex w-full pt-3">
+          <p class="text-xs font-nunito font-medium text-gray-400 pb-2">Fecha de convocatoria</p>
+
+          <input formControlName="fecha"  class="h-12 w-full flex border-2 border-slate-300 rounded-xl">
+        </div>
+
+      </form>
+    </div>
+</div>

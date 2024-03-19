@@ -1,0 +1,306 @@
+{
+  "pastors": [
+    {
+      "name": "Prs. Lau y Sara Guerra",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Andres Santanilla y Johana Rodriguez",
+            "Andres Villamil y Yury Pineda",
+            "Bladimir Avila y Alexandra Murcia",
+            "Henry Cruz y Carolina Velasquez",
+            "Jair Buitrago y Claudia Rodriguez",
+            "Jhon Torres y Sonia Olarte",
+            "Johan Manjarres y Sofia Mancipe",
+            "Juan Camilo Echeverria y Maria José Anaya",
+            "Mauricio Rios y Carolina Sastoque",
+            "Pastor Ortega y Carolina Barón",
+            "Pres. Carlos Anzola y Claudia Prieto",
+            "Raúl Arévalo y Lina Toro"]
+        },
+        {
+          "name": "Equipo multiplicación",
+          "members": ["Andres Cufiño",
+            "Gabriel Robayo y Evelin Mazuera",
+            "Giovany Bautista y Silvana Palomino",
+            "Ivan Torres y Deisy Moreno",
+            "Jeo Alvarez y Julissa Rojas",
+            "Josue Munar y Camila Pabón",
+            "Juan Sebastián Rodríguez y Gina Ramírez",
+            "Pra. Elizabeth Berrios",
+            "Saida Calderón",
+            "Samuel Romero y Katerin Gil",
+            "Stefania Espinosa",
+            "Yari Iguarán"]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Barrios",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Andrés y Paola Giraldo",
+            "Andrés y Patricia Villarraga",
+            "Andrés y Viviana Arias",
+            "Carlos y Rubis Bernal",
+            "Edmon y Dary Aguirre",
+            "Fernando y Claudia Pinzón",
+            "Joset Stalin y Maritza Urrego",
+            "Juan y Carmen Pulido",
+            "Larry y Verónica Quitian",
+            "Mauricio y Martha Parra",
+            "Rene y Alexandra Ruiz"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Sandoval",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Alexis y Andrea Ferrin",
+            "Brayan y Carolina Ruiz",
+            "Cristian y Mónica Robayo",
+            "David y Julia Vargas",
+            "Fredy y Sandra López",
+            "Jairo y Carolina Zuluaga",
+            "Johan y Saray Hipólito",
+            "Leandro y Sandra Mateus",
+            "Luis y Alejandra González",
+            "Nelly Marín",
+            "Wilson e Ivonne Ariza",
+            "Wilson y Bibiana Sánchez"
+          ]
+        },
+        {
+          "name": "Equipo multiplicación",
+          "members": ["Alex y Derly Susa",
+            "Cesar y Yaneth Torres",
+            "Cristian Linares ",
+            "Cristian y Eliana Uribe ",
+            "Esteban Vargas ",
+            "Fabián Hernández ",
+            "Juan David Uribe ",
+            "Julian Ballesteros",
+            "Maryeli Rodríguez ",
+            "Sebastian Linares "
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Cataño",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Denis y Alejandra Daza",
+            "Humberto y Angela Mora",
+            "Iván y Karen Guzmán",
+            "Jefferson y Alejandra Fandiño",
+            "Leonel y Sandra Amado",
+            "Mauricio y Johana Ramírez",
+            "Oscar y Natalia Guzmán",
+            "Ps. Luis y Etelvina Ríos",
+            "Raul y Paola Mora",
+            "Sergio y Maribel Espinosa",
+            "Wilson y Jenny Sanchez",
+            "Yesid y Paola Sanabria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Alonso",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Alejandro y Katherine Bonilla",
+            "Alexander y Constanza Fajardo",
+            "Andrés y Gabriela Gómez",
+            "Farut y Constanza Varón",
+            "Fredy y Natali Mendez",
+            "Giovani y Johana Rincón",
+            "Henry y Gina Prieto",
+            "Hernán y Luz Dary Rubiano",
+            "Hugo y Diana Ortegon",
+            "Ignacio y Liliana Zambrano",
+            "José y Julie Rubio",
+            "Oswaldo y Martha Pabón"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Mora",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Alex Leon y Andrea Manrique",
+            "Alexander Astudillo y Ivon Pacheco",
+            "Carlos Mendez y Luzdary Guerero",
+            "Daniel Garzon y Liliana Herrera",
+            "Hugo Herrera y Martha Ramirez",
+            "Jose Wilmer Jimenez",
+            "Julian Mondragon y Nidia Camargo",
+            "Leonardo Garcia y Gloria Parra",
+            "Luis Leon y Alexandra Suarez",
+            "Mario Saldarriaga y Yury Chavarro",
+            "Ps. Antonio  Farfan y P. Tatiana Bustos",
+            "Ps. Rocio Soto",
+            "Walter Guerrero y Viviana Linares"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. De Boer",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Álvaro & Greicy Ospina",
+            "Eddwin & Patricia Muñoz",
+            "Felipe y Mayerly Melo",
+            "Francisco & Dámaris Ortiz",
+            "Fredy & Angela Brito",
+            "Grupo 2",
+            "Leonardo & Ana María López",
+            "Leonardo e Isned Pardo",
+            "Luis Felipe y Mallerly Romero",
+            "Pedro & Erika Guaita",
+            "Ps José A. & Sandra Riveros",
+            "Ps Julio & Adriana Corva",
+            "Roverg & Mary Giraldo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Espinosa",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Alejandro y Sandra Rodríguez",
+            "Andrés y Margarita Gutiérrez",
+            "Ángel y Elna Suárez",
+            "Arley y Diana Urueña",
+            "Fabián y Yahel Cancelado",
+            "Jair y Raquel Huertas",
+            "John y Ángela Espinosa",
+            "Julio y Gina Gómez",
+            "Manuel y Yeny Rodríguez",
+            "Oscar y Yalila Cubides",
+            "Ps. Alfredo y Ángela Nivia",
+            "Ps. Andrés y Carola Solano",
+            "Ps. Saúl y Clara Sánchez",
+            "Stefania Espinosa"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Ordoñez",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Andres y Judith Guzman",
+            "Cesar y María Isabel Medina",
+            "Daniel y Mariana Duran",
+            "Diego y Maria Rojas",
+            "Felipe y Viviana Parra",
+            "Gustavo y Sandra Mireles",
+            "Jhon y Viviana Cantillo",
+            "Jouseph y Viviana Rodríguez",
+            "Manuel y Maireth Rentería",
+            "Mauricio y Monica Patino",
+            "P. Giovanny y Andrea Santamaria",
+            "P. Jonathan y Tatiana Hernandez",
+            "Samir y Ana Vera"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Castañeda",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Carlos y Yadila Gutierrez",
+            "Edicson y Claudia Pérez",
+            "Fernando y Amparo Rojas",
+            "Freddy y Milena Beltrán",
+            "Giovanny y Diana Velandia",
+            "Miguel y Heidy Alarcón",
+            "Nelson y Stella Ramirez",
+            "Oscar y Adriana Cupa",
+            "Ps. Jose y Jneth Rubio",
+            "Ps. Rogelio y Maritza Pinilla",
+            "William y Sandra Huertas",
+            "Yiovanni y Sandra Lopez"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Ramos",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["Aldemar y Carolina Higuera",
+            "Alfredo y Diana Torres",
+            "⁠Edgar y claudia pintor",
+            "Edwin y Diana Riaño",
+            "Henry y Liliana Bernal",
+            "Javier y Mabel Cruz",
+            "John y Vanessa Moscoso",
+            "Juan Carlos y Carmenza Bohórquez",
+            "Leonardo y Adriana Cabrera",
+            "Mauricio y Laura Rivera",
+            "Roberson y Marcela Flórez",
+            "William y Cecilia Páez"
+          ]
+        },
+        {
+          "name": "Equipo multiplicación",
+          "members": ["Juan y Cristina Sanabria",
+            "Miguel y Bibiana Pavez",
+            "Ps Marina Moreno"
+          ]
+        },
+        {
+          "name": "Equipo jovenes",
+          "members": ["Alejandra segura ",
+            "Camila Bohórquez ",
+            "Cristhian Espinosa ",
+            "Daniela Torres ",
+            "Emmanuel Ramos",
+            "Hugo Gil",
+            "Juan José Ruiz ",
+            "Juan Pablo Lucumí ",
+            "Sara Pintor ",
+            "Tatiana Chávez"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prs. Diego y Laura Gomez",
+      "teams": [
+        {
+          "name": "Equipo principal",
+          "members": ["⁠Daniel y Carolina Mantilla ",
+            "⁠Daniela Bustos",
+            "Estevan y Katherine García ",
+            "Felipe y Diana Beltrán ",
+            "Fernando y Sandra Rivera ",
+            "German y Claudia Ballesteros ",
+            "⁠Juan Camilo y Yeimy Ochoa ",
+            "⁠Julian González ",
+            "⁠Uriel y Jeimy Novoa "
+          ]
+        }
+      ]
+    }
+  ]
+}
