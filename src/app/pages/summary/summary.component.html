@@ -1,0 +1,37 @@
+<div class="w-full flex flex-col h-full">
+<div class="flex flex-col w-full  items-center p-5 h-4/5">
+  <h2 class="text-xl text-slate-800 font-nunito tracking-tight font-semibold pb-5">Resumen de convocatoria</h2>
+  <div class="w-full h-20 border-gray-400 border rounded-lg bg-gray-50 p-3">
+    <p class="text-sm font-nunito font-semibold text-slate-800">Ministerio {{attendance.pastor}}</p>
+    <p class="text-sm font-nunito font-normal">{{attendance.team}}</p>
+    <p class="text-sm font-nunito font-normal">{{attendance.lider}}</p>
+
+
+  </div>
+  <div class="w-full h-auto pt-5 space-y-1">
+    <p class="text-base font-nunito font-medium text-slate-800">👫 Convocatoria Familias: {{report.totalFamilies}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">⚡ Convocatoria Somos Uno: {{report.totalSomos}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">🪨 Convocatoria Rocas: {{report.totalRocas}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">🔥 Convocatoria Teens: {{report.totalTeens}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">👶🏻 Convocatoria Kids: {{report.totalKids}} </p>
+  </div>
+  <div class="w-full h-auto pt-5 space-y-1">
+    <p class="text-base font-nunito font-medium text-slate-800">👫 Invitados Especiales Familias: {{report.totalVipFamilies}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">⚡ Invitados Especiales Somos Uno: {{report.totalVipSomos}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">🪨 Invitados Especiales Rocas: {{report.totalVipRocas}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">🔥 Invitados Especiales Teens: {{report.totalVipSomos}} </p>
+    <p class="text-base font-nunito font-medium text-slate-800">👶🏻 Invitados Especiales Kids: {{report.totalVipTeens}} </p>
+  </div>
+  <div class="w-full h-auto pt-5">
+    <p class="text-xl font-nunito font-bold">🚀 Convocatoria Total: {{report.total}}</p>
+  </div>
+
+</div>
+  <div class="flex w-full h-1/5 space-x-2 p-5">
+    <button class="h-12 w-1/3 border border-purple-950 text-purple-950
+    text-sm font-nunito font-semibold rounded-2xl">Corregir</button>
+    <button class="h-12 w-2/3 border text-white
+    text-sm font-nunito font-semibold rounded-2xl
+    bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">Enviar convocatoria</button>
+  </div>
+</div>

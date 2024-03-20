@@ -15,6 +15,7 @@ export class AttendanceComponent implements OnInit {
   teams: any[] = [];
   leaders: any[] =[];
   activateRegisterVip: boolean = false;
+  summary: {} = {};
 
   defaultDate: Date = new Date();
   bsConfig: Partial<BsDatepickerConfig> = {
@@ -41,7 +42,15 @@ export class AttendanceComponent implements OnInit {
       teensHombres: new FormControl('', [Validators.required]),
       teensMujeres: new FormControl('', [Validators.required]),
       kidsHombres: new FormControl('', [Validators.required]),
-      kisdMujeres: new FormControl('', [Validators.required]),
+      kidsMujeres: new FormControl('', [Validators.required]),
+      vipHombres: new FormControl('', [Validators.required]),
+      vipMujeres: new FormControl('', [Validators.required]),
+      vipSomosHombres: new FormControl('', [Validators.required]),
+      vipSomosMujeres: new FormControl('', [Validators.required]),
+      vipRocasHombres: new FormControl('', [Validators.required]),
+      vipRocasMujeres: new FormControl('', [Validators.required]),
+      vipTeensHombres: new FormControl('', [Validators.required]),
+      vipTeensMujeres: new FormControl('', [Validators.required]),
     });
   }
 
@@ -81,6 +90,44 @@ export class AttendanceComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.registerForm)
+    const attendance = this.registerForm.value
+    localStorage.setItem('attendance', JSON.stringify(attendance))
+    this.getResumeAttendance(attendance)
+  }
+
+  getResumeAttendance(attendance: any){
+    const totalFamilies = attendance.hombres + attendance.mujeres
+    const totalSomos = attendance.somosHombres + attendance.somosMujeres
+    const totalRocas = attendance.rocasHombres + attendance.rocasMujeres
+    const totalTeens = attendance.teensHombres + attendance.teensMujeres
+    const totalKids = attendance.kidsHombres + attendance.kidsMujeres
+    const totalAttendance = totalFamilies + totalSomos + totalRocas + totalTeens + totalKids
+
+    const totalVipFamilies = attendance.vipHombres + attendance.vipMujeres
+    const totalVipSomos = attendance.vipSomosHombres + attendance.vipSomosMujeres
+    const totalVipRocas = attendance.vipRocasHombres + attendance.vipRocasMujeres
+    const totalVipTeens = attendance.vipTeensHombres + attendance.vipTeensMujeres
+    const totalVip = totalVipFamilies + totalVipSomos + totalVipRocas + totalVipTeens
+
+    const total = totalAttendance + totalVip
+
+    const summary = {
+      totalFamilies,
+      totalSomos,
+      totalRocas,
+      totalTeens,
+      totalKids,
+      totalAttendance,
+      totalVipFamilies,
+      totalVipSomos,
+      totalVipRocas,
+      totalVipTeens,
+      totalVip,
+      total
+    }
+    localStorage.setItem('summary',JSON.stringify(summary))
+    this.summary = summary
+    return summary
   }
 
 }

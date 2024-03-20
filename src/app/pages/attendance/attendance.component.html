@@ -107,28 +107,21 @@
           <div class="w-full h-auto flex space-x-2 pb-3">
             <div class="flex flex-col w-1/2 h-auto">
               <p class="text-xs font-semibold font-nunito pb-2">Hombres 👦️</p>
-              <input formControlName="teensHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+              <input formControlName="kidsHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
               p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
             </div>
             <div class="flex flex-col w-1/2 h-auto">
               <p class="text-xs font-semibold font-nunito pb-2">Mujeres 👧🏻️</p>
-              <input formControlName="teensMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+              <input formControlName="kidsMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
               p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
             </div>
           </div>
         </div>
-        <div *ngIf="!activateRegisterVip" class="w-full h-auto flex flex-col pt-5">
-          <p class="text-md font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Tienes invitados especiales?</p>
-          <div class="flex w-full h-auto space-x-2">
-          <button (click)="activateVip()" class="h-12 flex w-1/2 border rounded-2xl items-center justify-center text-purple-950 font-nunito
-          font-bold border-purple-950">Si, registrar</button>
-          <button  class="h-12 flex w-1/2 border rounded-2xl items-center justify-center font-nunito
-          text-white font-bold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">No, enviar</button>
-          </div>
-        </div>
+
+
 
         <!--Seccion de Registro de nuevos -->
-        <div *ngIf="activateRegisterVip" class="w-full h-auto flex flex-col pt-2">
+        <div  class="w-full h-auto flex flex-col pt-2">
           <div class="border w-full bg-pink-400"></div>
           <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Invitados Especiales Familias</p>
           <div class="w-full h-auto flex space-x-2 pb-3">
@@ -188,8 +181,8 @@
           </div>
 
           <div class="w-full h-12 pt-5 pb-5">
-            <button class="flex h-12 w-full border rounded-2xl items-center justify-center font-nunito
-          text-white font-bold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">Registrar convocatoria</button>
+            <button (click)="onSubmit()" class="flex h-12 w-full border rounded-2xl items-center justify-center font-nunito
+          text-white font-semibold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500" routerLink="/summary">Registrar convocatoria</button>
           </div>
         </div>
       </div>
