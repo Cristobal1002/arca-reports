@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
+import {BsDatepickerConfig} from "ngx-bootstrap/datepicker";
 
 @Component({
   selector: 'app-attendance',
@@ -13,17 +14,34 @@ export class AttendanceComponent implements OnInit {
   pastors: any[] = [];
   teams: any[] = [];
   leaders: any[] =[];
+  activateRegisterVip: boolean = false;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
-    this.loadJSON();
+  defaultDate: Date = new Date();
+  bsConfig: Partial<BsDatepickerConfig> = {
+    dateInputFormat: 'DD/MM/YYYY'
+  };
 
-  }
+  constructor(private http: HttpClient, private fb: FormBuilder) {}
   ngOnInit(): void {
+    this.loadJSON();
+    setTimeout(() => {
+      this.defaultDate = new Date();
+    });
     this.registerForm = new FormGroup({
       pastor: new FormControl('', [Validators.required]),
       team: new FormControl('', [Validators.required]),
       lider: new FormControl('', [Validators.required]),
-      fecha: new FormControl('', [Validators.required])
+      fecha: new FormControl('', [Validators.required]),
+      hombres: new FormControl('', [Validators.required]),
+      mujeres: new FormControl('', [Validators.required]),
+      somosHombres: new FormControl('', [Validators.required]),
+      somosMujeres: new FormControl('', [Validators.required]),
+      rocasHombres: new FormControl('', [Validators.required]),
+      rocasMujeres: new FormControl('', [Validators.required]),
+      teensHombres: new FormControl('', [Validators.required]),
+      teensMujeres: new FormControl('', [Validators.required]),
+      kidsHombres: new FormControl('', [Validators.required]),
+      kisdMujeres: new FormControl('', [Validators.required]),
     });
   }
 
@@ -58,6 +76,9 @@ export class AttendanceComponent implements OnInit {
     console.log(this.leaders)
   }
 
+  activateVip(){
+    this.activateRegisterVip = true
+  }
   onSubmit(){
     console.log(this.registerForm)
   }

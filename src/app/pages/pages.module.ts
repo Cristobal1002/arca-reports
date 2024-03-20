@@ -6,6 +6,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BsDatepickerModule} from "ngx-bootstrap/datepicker";
+import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 
@@ -22,6 +25,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ]
 })
 export class PagesModule { }
