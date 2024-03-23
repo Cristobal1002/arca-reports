@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 import {BsDatepickerConfig} from "ngx-bootstrap/datepicker";
+import * as moment from "moment";
 
 @Component({
   selector: 'app-attendance',
@@ -17,22 +18,15 @@ export class AttendanceComponent implements OnInit {
   activateRegisterVip: boolean = false;
   summary: {} = {};
 
-  defaultDate: Date = new Date();
-  bsConfig: Partial<BsDatepickerConfig> = {
-    dateInputFormat: 'DD/MM/YYYY'
-  };
-
   constructor(private http: HttpClient, private fb: FormBuilder) {}
   ngOnInit(): void {
     this.loadJSON();
-    setTimeout(() => {
-      this.defaultDate = new Date();
-    });
+    const fechaHoy = moment().format('DD/MM/YYYY');
     this.registerForm = new FormGroup({
       pastor: new FormControl('', [Validators.required]),
       team: new FormControl('', [Validators.required]),
       lider: new FormControl('', [Validators.required]),
-      fecha: new FormControl('', [Validators.required]),
+      fecha: new FormControl(fechaHoy, [Validators.required]),
       hombres: new FormControl('', [Validators.required]),
       mujeres: new FormControl('', [Validators.required]),
       somosHombres: new FormControl('', [Validators.required]),
@@ -52,6 +46,7 @@ export class AttendanceComponent implements OnInit {
       vipTeensHombres: new FormControl('', [Validators.required]),
       vipTeensMujeres: new FormControl('', [Validators.required]),
     });
+
   }
 
   loadJSON() {
@@ -71,28 +66,27 @@ export class AttendanceComponent implements OnInit {
       if (elements.name === pastor){
         this.teams = elements.teams;
       }
-    })
+    });
   }
 
   getLeader(){
     const team = this.registerForm.get('team')?.value
+    console.log('Team Seleccionado', team)
     console.log(this.teams)
     this.teams.forEach((elements) => {
       if(elements.name === team){
         this.leaders = elements.members
       }
     })
-    console.log(this.leaders)
   }
 
   activateVip(){
     this.activateRegisterVip = true
   }
   onSubmit(){
-    console.log(this.registerForm)
-    const attendance = this.registerForm.value
-    localStorage.setItem('attendance', JSON.stringify(attendance))
-    this.getResumeAttendance(attendance)
+    localStorage.setItem('attendance', JSON.stringify(this.registerForm.value));
+    const attendance = this.registerForm.value;
+    this.getResumeAttendance(attendance);
   }
 
   getResumeAttendance(attendance: any){

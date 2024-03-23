@@ -35,7 +35,7 @@
           <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Fecha de convocatoria</p>
 
           <div class="relative flex items-center">
-            <input formControlName="fecha" bsDatepicker [(bsValue)]="defaultDate" [bsConfig]="bsConfig"
+            <input formControlName="fecha" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
                    placeholder="Selecciona una fecha" class="h-12 w-full flex border border-slate-300
                    rounded-lg pl-4 pr-12 text-slate-800 font-nunito text-sm">
             <img class=" h-6 w-6  absolute right-3 top-3 text-gray-400 fas fa-calendar-alt"

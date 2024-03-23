@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {PagesModule} from "./pages/pages.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {BsDatepickerModule} from "ngx-bootstrap/datepicker";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-b
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
