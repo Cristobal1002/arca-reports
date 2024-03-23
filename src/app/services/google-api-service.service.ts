@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GoogleApiServiceService {
-  private apiUrl = 'http://ec2-18-208-217-202.compute-1.amazonaws.com:3100q/api/v1/google/register-attendance';
+  private apiUrl = 'http://ec2-18-208-217-202.compute-1.amazonaws.com:3100/api/v1/google/register-attendance';
   constructor(private http: HttpClient) { }
 
   sendDataForm (data: any): Observable<any> {
