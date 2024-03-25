@@ -53,7 +53,11 @@
   
         <div class="flex flex-col w-full h-auto pt-3">
           <div class="w-full h-auto flex flex-col">
-  
+            <div class="flex w-full">
+              <p class="italic font-nunito text-xs text-sky-700 text-justify">Por favor registra el número de asistentes <strong>sin tener en cuenta los invitados nuevos</strong> 
+                ya que ellos serán registrados en la siguiente sección de este formulario
+              </p>
+            </div>
             <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Convocatoria Familias</p>
             <div class="w-full h-auto flex space-x-2 pb-3">
               <div class="flex flex-col w-1/2 h-auto">
@@ -192,7 +196,7 @@
   
             <div class="w-full h-12 pt-5 pb-5">
               <div *ngIf="submitted && registerForm.invalid" class="alert alert-danger">
-                <p class="font-nunito text-sm">Todos los campos son obligatorios.</p> 
+                <p class="font-nunito text-sm tracking-tighter">Hey! Todos los campos son obligatorios.</p> 
                </div>
               <button (click)="onSubmit()" class="flex h-12 w-full border rounded-2xl items-center justify-center font-nunito
             text-white font-semibold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">Registrar convocatoria</button>
