@@ -9,6 +9,11 @@ import {GoogleApiServiceService} from "../../services/google-api-service.service
 export class SummaryComponent implements OnInit {
   report: any;
   attendance: any;
+  loading:boolean = false;
+  successData: boolean = false;
+  errorData: boolean = false;
+
+
   constructor(private googleService: GoogleApiServiceService) {
     const data = localStorage.getItem('summary')
     const attendance = localStorage.getItem('attendance')
@@ -30,6 +35,7 @@ export class SummaryComponent implements OnInit {
   }
 
   async onSubmit(){
+    this.loading = true
     const data = [this.attendance.fecha, this.attendance.pastor, this.attendance.team, this.attendance.lider,
     this.attendance.hombres, this.attendance.mujeres, this.attendance.somosHombres,
     this.attendance.somosMujeres, this.attendance.rocasHombres, this.attendance.rocasMujeres,
@@ -41,9 +47,11 @@ export class SummaryComponent implements OnInit {
     this.googleService.sendDataForm(data).subscribe(
       response => {
         console.log('Datos enviados con éxito:', response);
+        this.successData = true
       },
       error => {
         console.error('Error al enviar datos:', error);
+        this.errorData = true
       }
     )
 

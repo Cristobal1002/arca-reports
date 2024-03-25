@@ -1,192 +1,206 @@
-<div class="flex h-full w-full pt-7 pl-7 pr-7 pb-5">
-  <div class="w-full h-full flex flex-col items-center">
-    <h2 class="text-xl text-slate-800 font-nunito tracking-tight font-semibold">Registro de convocatoria</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full h-auto pt-5 overflow-auto">
-      <div class="flex flex-col w-full h-auto">
-        <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selección pastores</p>
+<div class="flex h-full w-full p-4 lg:p-5 md:p-5 lg:space-x-5 md:space-x-5">
+  <!-- Lado izquierdo con la imagen -->
+  <div class="hidden lg:block md:w-1/2 lg:w-1/2 xl:w-1/3">
+    <img class="h-full w-full  object-contain" src="./assets/images/welcome_arca.png" alt="">
+  </div>
 
-        <select formControlName="pastor" (change)="setPastor()" class="flex w-full h-12 border border-gray-300 rounded-lg pl-5
-            text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="pastors">
-          <option value="">Elige una opción</option>
-          <option *ngFor="let pastor of pastors">{{ pastor.name }}</option>
-        </select>
-
-        <div class="flex flex-col w-full  pt-3">
-          <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selecciona un equipo</p>
-
-          <select formControlName="team" (change)="getLeader()" class="flex w-full h-12 border border-slate-300 rounded-lg pl-5
-            text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="teams">
-            <option value="">Selecciona el equipo al que perteneces</option>
-            <option *ngFor="let team of teams">{{ team.name }}</option>
+  <!-- Lado derecho con el formulario -->
+  <div class="w-full lg:w-1/2 xl:w-2/3 overflow-auto">
+    <div class="flex h-full flex-col items-center">
+      <h2 class="text-xl text-slate-800 font-nunito tracking-tight font-semibold">Registro de convocatoria</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col w-full h-auto pt-5 overflow-auto">
+        <div class="flex flex-col w-full h-auto">
+          <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selección pastores</p>
+  
+          <select formControlName="pastor" (change)="setPastor()" class="flex w-full h-12 border border-gray-300 rounded-lg pl-5
+              text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="pastors">
+            <option value="">Elige una opción</option>
+            <option *ngFor="let pastor of pastors">{{ pastor.name }}</option>
           </select>
-        </div>
-
-        <div class="flex flex-col w-full pt-3">
-          <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selecciona un líder</p>
-
-          <select formControlName="lider" class="flex w-full h-12 border border-slate-300 rounded-lg pl-5
-            text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="lideres">
-            <option value="">Selecciona el líder</option>
-            <option *ngFor="let leader of leaders">{{ leader }}</option>
-          </select>
-        </div>
-
-        <div class="flex-col flex w-full pt-3">
-          <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Fecha de convocatoria</p>
-
-          <div class="relative flex items-center">
-            <input formControlName="fecha" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
-                   placeholder="Selecciona una fecha" class="h-12 w-full flex border border-slate-300
-                   rounded-lg pl-4 pr-12 text-slate-800 font-nunito text-sm">
-            <img class=" h-6 w-6  absolute right-3 top-3 text-gray-400 fas fa-calendar-alt"
-                 src="./assets/svg/calendar_simple.svg">
+  
+          <div class="flex flex-col w-full  pt-3">
+            <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selecciona un equipo</p>
+  
+            <select formControlName="team" (change)="getLeader()" class="flex w-full h-12 border border-slate-300 rounded-lg pl-5
+              text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="teams">
+              <option value="">Selecciona el equipo al que perteneces</option>
+              <option *ngFor="let team of teams">{{ team.name }}</option>
+            </select>
           </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col w-full h-auto pt-3">
-        <div class="w-full h-auto flex flex-col">
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Convocatoria Familias</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="hombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="mujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
+  
+          <div class="flex flex-col w-full pt-3">
+            <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Selecciona un líder</p>
+  
+            <select formControlName="lider" class="flex w-full h-12 border border-slate-300 rounded-lg pl-5
+              text-sm text-slate-800 font-nunito tracking-tight font-light" name="" id="lideres">
+              <option value="">Selecciona el líder</option>
+              <option *ngFor="let leader of leaders">{{ leader }}</option>
+            </select>
           </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">⚡ Convocatoria Somos Uno</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="somosHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="somosMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-          </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🪨 Convocatoria Rocas</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="rocasHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="rocasMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-          </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🔥 Convocatoria Teens</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="teensHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="teensMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-          </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">👶🏻 Convocatoria Kids & Babies</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 👦️</p>
-              <input formControlName="kidsHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 👧🏻️</p>
-              <input formControlName="kidsMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+          <div class="flex-col flex w-full pt-3">
+            <p class="text-sm font-nunito font-medium text-gray-400 pb-2">Fecha de convocatoria</p>
+  
+            <div class="relative flex items-center">
+              <input formControlName="fecha" bsDatepicker [bsConfig]="bsConfig"
+                     placeholder="Selecciona una fecha" class="h-12 w-full flex border border-slate-300
+                     rounded-lg pl-4 pr-12 text-slate-800 font-nunito text-sm">
+              <img class=" h-6 w-6  absolute right-3 top-3 text-gray-400 fas fa-calendar-alt"
+                   src="./assets/svg/calendar_simple.svg">
             </div>
           </div>
         </div>
-
-
-
-        <!--Seccion de Registro de nuevos -->
-        <div  class="w-full h-auto flex flex-col pt-2">
-          <div class="border w-full bg-pink-400"></div>
-          <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Invitados Especiales Familias</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="vipHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+        <div class="flex flex-col w-full h-auto pt-3">
+          <div class="w-full h-auto flex flex-col">
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Convocatoria Familias</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="hombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number"
+                >
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="mujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
             </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="vipMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">⚡ Convocatoria Somos Uno</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="somosHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="somosMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+            </div>
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🪨 Convocatoria Rocas</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="rocasHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="rocasMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+            </div>
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🔥 Convocatoria Teens</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="teensHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="teensMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+            </div>
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">👶🏻 Convocatoria Kids & Babies</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 👦️</p>
+                <input formControlName="kidsHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 👧🏻️</p>
+                <input formControlName="kidsMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
             </div>
           </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">⚡ Invitados Especiales Somos Uno</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="vipSomosHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+  
+  
+          <!--Seccion de Registro de nuevos -->
+          <div  class="w-full h-auto flex flex-col pt-2">
+            <div class="border w-full bg-pink-400"></div>
+            <p class="text-sm font-nunito text-slate-800 font-bold pb-2 pt-5">👫 Invitados Especiales Familias</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="vipHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="vipMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
             </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="vipSomosMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">⚡ Invitados Especiales Somos Uno</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="vipSomosHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="vipSomosMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
             </div>
-          </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🪨 Invitados Especiales Rocas</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="vipRocasHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🪨 Invitados Especiales Rocas</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="vipRocasHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="vipRocasMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
             </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="vipRocasMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+  
+            <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🔥 Invitados Especiales Teens</p>
+            <div class="w-full h-auto flex space-x-2 pb-3">
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
+                <input formControlName="vipTeensHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+              <div class="flex flex-col w-1/2 h-auto">
+                <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
+                <input formControlName="vipTeensMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
+                p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+              </div>
+  
             </div>
-          </div>
-
-          <p class="text-sm font-nunito text-slate-800 font-bold pt-2 pb-2">🔥 Invitados Especiales Teens</p>
-          <div class="w-full h-auto flex space-x-2 pb-3">
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Hombres 🙋🏻‍♂️</p>
-              <input formControlName="vipTeensHombres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
+            
+            
+  
+            <div class="w-full h-12 pt-5 pb-5">
+              <div *ngIf="submitted && registerForm.invalid" class="alert alert-danger">
+                <p class="font-nunito text-sm">Todos los campos son obligatorios.</p> 
+               </div>
+              <button (click)="onSubmit()" class="flex h-12 w-full border rounded-2xl items-center justify-center font-nunito
+            text-white font-semibold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">Registrar convocatoria</button>
             </div>
-            <div class="flex flex-col w-1/2 h-auto">
-              <p class="text-xs font-semibold font-nunito pb-2">Mujeres 🙋🏻‍♀️️</p>
-              <input formControlName="vipTeensMujeres" class="w-full flex h-10 border border-gray-300 rounded-lg
-              p-3 text-slate-800 text-sm" placeholder="# de asistentes" type="number">
-            </div>
-
-          </div>
-
-          <div class="w-full h-12 pt-5 pb-5">
-            <button (click)="onSubmit()" class="flex h-12 w-full border rounded-2xl items-center justify-center font-nunito
-          text-white font-semibold bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500" routerLink="/summary">Registrar convocatoria</button>
           </div>
         </div>
-      </div>
-
-    </form>
+  
+      </form>
+    </div>
   </div>
 </div>

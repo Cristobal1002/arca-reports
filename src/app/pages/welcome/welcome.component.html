@@ -1,21 +1,34 @@
-<div class="w-full h-full p-5 flex flex-col ">
-  <div class="flex flex-col h-1/2 w-full">
-    <img class="flex items-center justify-center" src="./assets/images/welcome_arca.png" alt="">
-  </div>
-  <div class="flex flex-col h-2/5 w-full items-center">
-    <h1 class="text-3xl font-nunito font-bold text-slate-800 tracking-tight">¡Hola Coordinador!</h1>
-    <p class="text-slate-800 font-nunito tracking-tight text-sm pt-3 text-justify">
-      Este formulario nos ayudará a tener una visión global de nuestro ministerio, así como a plantear estrategias que engrandezcan el Reino de Dios, por ello,
-      agradecemos tu diligencia para que cada sábado puedas suministrar la información exacta antes de cerrar el día 🙏🏻.
-      ¡¡Contamos contigo!!</p>
-  </div>
-  <div class="flex flex-col h-1/5 justify-center items-center">
-    <div class="flex h-12 w-full">
-      <button routerLink = "/attendance" class="flex w-full  h-full rounded-2xl border items-center justify-center
+<div class="w-full h-full p-5 flex">
+  <div class="md:flex lg:flex">
+    <div class="flex flex-col h-1/2 w-full lg:w-1/2 lg:h-full items-center justify-center">
+      <img class="flex" src="./assets/images/welcome_arca.png" alt="">
+    </div>
+
+    <div class="md:flex-col lg:flex-col md:w-1/2 lg:w-1/2 md:h-full lg:h-full">
+
+      <div class="w-full items-center md:flex-col lg:flex-col justify-center h-3/5">
+        <h1 class="text-3xl font-nunito font-bold text-slate-800 tracking-tight
+        lg:text-5xl lg:pb-16 md:text-5xl md:pb-16">¡Hola Coordinador!</h1>
+        <p class="text-slate-800 font-nunito tracking-tight text-sm pt-3 text-justify
+        md:text-2xl lg:text-2xl">
+          Este formulario nos ayudará a tener una visión global de nuestro ministerio, así como a plantear estrategias
+          que
+          engrandezcan el Reino de Dios, por ello,
+          agradecemos tu diligencia para que cada sábado puedas suministrar la información exacta antes de cerrar el día
+          🙏🏻.
+          ¡¡Contamos contigo!!</p>
+      </div>
+      <div class="flex flex-col h-1/5 justify-center items-center pt-5">
+        <div class="flex h-12 w-full">
+          <button routerLink="/attendance" class="flex w-full  h-full rounded-2xl border items-center justify-center
       bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 shadow-xl text-white font-nunito
       font-bold font-xs">
-        Registrar convocatoria
-      </button>
+            Registrar convocatoria
+          </button>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </div>

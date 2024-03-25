@@ -1,10 +1,11 @@
-<div class="w-full flex flex-col h-full">
-<div class="flex flex-col w-full  items-center p-5 h-4/5">
+<div class="w-full flex flex-col h-full" *ngIf="successData == false && errorData == false">
+<div class="flex flex-col w-full  items-center p-5 h-4/5 ">
   <h2 class="text-xl text-slate-800 font-nunito tracking-tight font-semibold pb-5">Resumen de convocatoria</h2>
-  <div class="w-full h-20 border-gray-400 border rounded-lg bg-gray-50 p-2">
+  <div class="w-full h-24 border-gray-400 border rounded-lg bg-gray-50 p-2">
     <p class="text-sm font-nunito font-semibold text-slate-800">Ministerio {{attendance.pastor}}</p>
     <p class="text-sm font-nunito font-normal">{{attendance.team}}</p>
     <p class="text-sm font-nunito font-normal">{{attendance.lider}}</p>
+    <p class="text-sm font-nunito font-normal">Fecha: {{attendance.fecha}}</p>
   </div>
   <div class="w-full h-auto pt-4 space-y-1">
     <p class="text-sm font-nunito font-medium text-slate-800">👫 Convocatoria Familias: {{report.totalFamilies}} </p>
@@ -24,9 +25,29 @@
   </div>
 
 </div>
+<div *ngIf="loading" class="w-full h-auto flex items-center justify-center">
+  <img  class="w-16 h-16 object-cover" src="./assets/gifs/loading.gif" alt="">
+</div>
   <div class="flex w-full h-1/5 space-x-2 p-5">
-    <button (click)="onSubmit()" class="h-12 w-full border text-white
+    <button *ngIf="loading == false" (click)="onSubmit()" class="h-12 w-full border text-white
     text-sm font-nunito font-semibold rounded-2xl
     bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500">Enviar convocatoria</button>
   </div>
+</div>
+<div class="flex w-full h-full items-center justify-center p-5" *ngIf="successData == true">
+  <div class="flex flex-col h-full w-full items-center justify-center">
+    <img class="w-40 h-40 object-contain" src="./assets/gifs/success.gif" alt="">
+    <p class="font-nunito text-xs font-bold text-green-500 text-center">Yujuuu! Tu convocatoria fue registrada con éxito!</p>
+  </div>
+</div>
+
+<div class="flex flex-col w-full h-full items-center justify-center p-5" *ngIf="errorData == true">
+  <div class="alert alert-info " *ngIf="true">
+    <p>Vaya! Los datos no pudieron resgitrarse por algún problema desconocido</p>
+  </div>
+  <button class="flex w-full h-12 border-2 border-purple-900 rounded-lg items-center justify-center space-x-5">
+    <img class="w-8 h-8" src="./assets/images/whatsapp.png" alt="">
+    <a href="https://wa.me/573165121606?text=Criiiisss!%20El%20reporte%20de%20convocatoria%20no%20sirve" target="_blank" rel="noopener noreferrer"
+    class="text-sm font-semibold font-nunito text-purple-900">Reportar incidente</a>
+  </button>
 </div>

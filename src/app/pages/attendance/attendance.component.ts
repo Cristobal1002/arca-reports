@@ -1,8 +1,9 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
-import {BsDatepickerConfig} from "ngx-bootstrap/datepicker";
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms";
+import { BsDatepickerConfig } from "ngx-bootstrap/datepicker";
 import * as moment from "moment";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-attendance',
@@ -14,11 +15,18 @@ export class AttendanceComponent implements OnInit {
   data: any[] = [];
   pastors: any[] = [];
   teams: any[] = [];
-  leaders: any[] =[];
+  leaders: any[] = [];
   activateRegisterVip: boolean = false;
   summary: {} = {};
+  submitted: boolean = false;
+  bsConfig: Partial<BsDatepickerConfig>;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {}
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) { 
+    this.bsConfig = {
+      dateInputFormat: 'DD/MM/YYYY', // Formato de fecha deseado
+      // Otros parámetros de configuración opcionalmente
+    };
+  }
   ngOnInit(): void {
     this.loadJSON();
     const fechaHoy = moment().format('DD/MM/YYYY');
@@ -26,7 +34,7 @@ export class AttendanceComponent implements OnInit {
       pastor: new FormControl('', [Validators.required]),
       team: new FormControl('', [Validators.required]),
       lider: new FormControl('', [Validators.required]),
-      fecha: new FormControl(fechaHoy, [Validators.required]),
+      fecha: new FormControl([fechaHoy], [Validators.required]),
       hombres: new FormControl('', [Validators.required]),
       mujeres: new FormControl('', [Validators.required]),
       somosHombres: new FormControl('', [Validators.required]),
@@ -46,7 +54,6 @@ export class AttendanceComponent implements OnInit {
       vipTeensHombres: new FormControl('', [Validators.required]),
       vipTeensMujeres: new FormControl('', [Validators.required]),
     });
-
   }
 
   loadJSON() {
@@ -59,37 +66,48 @@ export class AttendanceComponent implements OnInit {
     });
   }
 
-  setPastor(){
+  setPastor() {
     const pastor = this.registerForm.get('pastor')?.value
     console.log('pastor seleccionado:', pastor)
     this.data.forEach((elements) => {
-      if (elements.name === pastor){
+      if (elements.name === pastor) {
         this.teams = elements.teams;
       }
     });
   }
 
-  getLeader(){
+  getLeader() {
     const team = this.registerForm.get('team')?.value
     console.log('Team Seleccionado', team)
     console.log(this.teams)
     this.teams.forEach((elements) => {
-      if(elements.name === team){
+      if (elements.name === team) {
         this.leaders = elements.members
       }
     })
   }
 
-  activateVip(){
-    this.activateRegisterVip = true
-  }
-  onSubmit(){
-    localStorage.setItem('attendance', JSON.stringify(this.registerForm.value));
-    const attendance = this.registerForm.value;
-    this.getResumeAttendance(attendance);
+  isFieldInvalid(fieldName: string): boolean {
+    const field = this.registerForm.get(fieldName);
+    return this.submitted && (field?.invalid ?? false);
   }
 
-  getResumeAttendance(attendance: any){
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registerForm.valid) {
+      const formData = this.registerForm.value;
+      formData.fecha = moment(formData.fecha, 'YYYY-MM-DD').format('DD/MM/YYYY');
+      localStorage.setItem('attendance', JSON.stringify(this.registerForm.value));
+      const attendance = this.registerForm.value;
+      this.getResumeAttendance(attendance);
+      this.router.navigate(['/summary']);
+    } else {
+      console.log('Formulario inválido');
+    }
+  }
+
+  getResumeAttendance(attendance: any) {
     const totalFamilies = attendance.hombres + attendance.mujeres
     const totalSomos = attendance.somosHombres + attendance.somosMujeres
     const totalRocas = attendance.rocasHombres + attendance.rocasMujeres
@@ -119,7 +137,7 @@ export class AttendanceComponent implements OnInit {
       totalVip,
       total
     }
-    localStorage.setItem('summary',JSON.stringify(summary))
+    localStorage.setItem('summary', JSON.stringify(summary))
     this.summary = summary
     return summary
   }
