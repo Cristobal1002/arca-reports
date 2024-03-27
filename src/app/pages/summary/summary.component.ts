@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 import {GoogleApiServiceService} from "../../services/google-api-service.service";
 
 @Component({
@@ -12,6 +13,9 @@ export class SummaryComponent implements OnInit {
   loading:boolean = false;
   successData: boolean = false;
   errorData: boolean = false;
+  date = new Date();
+  registerDate = this.date.toLocaleString('en-US', { timeZone: 'America/Bogota' });
+
 
 
   constructor(private googleService: GoogleApiServiceService) {
@@ -36,7 +40,7 @@ export class SummaryComponent implements OnInit {
 
   async onSubmit(){
     this.loading = true
-    const data = [this.attendance.fecha, this.attendance.pastor, this.attendance.team, this.attendance.lider,
+    const data = [this.registerDate, this.attendance.fecha, this.attendance.pastor, this.attendance.team, this.attendance.lider,
     this.attendance.hombres, this.attendance.mujeres, this.attendance.somosHombres,
     this.attendance.somosMujeres, this.attendance.rocasHombres, this.attendance.rocasMujeres,
     this.attendance.teensHombres, this.attendance.teensMujeres, this.attendance.kidsHombres, this.attendance.kidsMujeres,
