@@ -29,12 +29,12 @@ export class AttendanceComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loadJSON();
-    const fechaHoy = moment().format('DD/MM/YYYY');
+    const fechaHoy = new Date();
     this.registerForm = new FormGroup({
       pastor: new FormControl('', [Validators.required]),
       team: new FormControl('', [Validators.required]),
       lider: new FormControl('', [Validators.required]),
-      fecha: new FormControl([fechaHoy], [Validators.required]),
+      fecha: new FormControl(moment().format('DD/MM/YYYY'), [Validators.required]),
       hombres: new FormControl('', [Validators.required]),
       mujeres: new FormControl('', [Validators.required]),
       somosHombres: new FormControl('', [Validators.required]),
@@ -95,17 +95,19 @@ export class AttendanceComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    console.log('Formulario:', this.registerForm)
     if (this.registerForm.valid) {
-      const formData = this.registerForm.value;
-      formData.fecha = moment(formData.fecha, 'YYYY-MM-DD').format('DD/MM/YYYY');
-      localStorage.setItem('attendance', JSON.stringify(this.registerForm.value));
-      const attendance = this.registerForm.value;
-      this.getResumeAttendance(attendance);
-      this.router.navigate(['/summary']);
+        const formData = this.registerForm.value;
+        // Formatear la fecha antes de asignarla
+        formData.fecha = moment(formData.fecha, 'DD/MM/YYYY').format('DD/MM/YYYY');
+        localStorage.setItem('attendance', JSON.stringify(formData));
+        const attendance = formData;
+        this.getResumeAttendance(attendance);
+        this.router.navigate(['/summary']);
     } else {
-      console.log('Formulario inválido');
+        console.log('Formulario inválido');
     }
-  }
+}
 
   getResumeAttendance(attendance: any) {
     const totalFamilies = attendance.hombres + attendance.mujeres
