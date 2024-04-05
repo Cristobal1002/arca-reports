@@ -5,7 +5,8 @@
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Andres Santanilla y Johana Rodriguez",
+          "members": [
+            "Andres Santanilla y Johana Rodriguez",
             "Andres Villamil y Yury Pineda",
             "Bladimir Avila y Alexandra Murcia",
             "Henry Cruz y Carolina Velasquez",
@@ -15,32 +16,36 @@
             "Juan Camilo Echeverria y Maria José Anaya",
             "Mauricio Rios y Carolina Sastoque",
             "Pastor Ortega y Carolina Barón",
-            "Pres. Carlos Anzola y Claudia Prieto",
-            "Raúl Arévalo y Lina Toro"]
+            "Prs. Carlos Anzola y Claudia Prieto",
+            "Raúl Arévalo y Lina Toro"
+          ]
         },
         {
           "name": "Equipo multiplicación",
-          "members": ["Andres Cufiño",
+          "members": [
+            "Andres Cufiño",
             "Gabriel Robayo y Evelin Mazuera",
             "Giovany Bautista y Silvana Palomino",
             "Ivan Torres y Deisy Moreno",
-            "Jeo Alvarez y Julissa Rojas",
+            "Jeofreddy Alvarez y Julissa Rojas",
             "Josue Munar y Camila Pabón",
+            "Juan de la Cruz",
             "Juan Sebastián Rodríguez y Gina Ramírez",
             "Pra. Elizabeth Berrios",
             "Saida Calderón",
             "Samuel Romero y Katerin Gil",
-            "Stefania Espinosa",
-            "Yari Iguarán"]
+            "Yari Iguarán"
+          ]
         }
       ]
     },
     {
-      "name": "Prs. Barrios",
+      "name": "Prs. Luis y Janeth Barrios",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Andrés y Paola Giraldo",
+          "members": [
+            "Andrés y Paola Giraldo",
             "Andrés y Patricia Villarraga",
             "Andrés y Viviana Arias",
             "Carlos y Rubis Bernal",
@@ -56,11 +61,12 @@
       ]
     },
     {
-      "name": "Prs. Sandoval",
+      "name": "Prs. Jorge e Ivón Sandoval",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Alexis y Andrea Ferrin",
+          "members": [
+            "Alexis y Andrea Ferrin",
             "Brayan y Carolina Ruiz",
             "Cristian y Mónica Robayo",
             "David y Julia Vargas",
@@ -76,7 +82,8 @@
         },
         {
           "name": "Equipo multiplicación",
-          "members": ["Alex y Derly Susa",
+          "members": [
+            "Alex y Derly Susa",
             "Cesar y Yaneth Torres",
             "Cristian Linares ",
             "Cristian y Eliana Uribe ",
@@ -91,18 +98,19 @@
       ]
     },
     {
-      "name": "Prs. Cataño",
+      "name": "Prs. Jorge Andres y Margarita Cataño",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Denis y Alejandra Daza",
+          "members": [
+            "Denis y Alejandra Daza",
             "Humberto y Angela Mora",
             "Iván y Karen Guzmán",
             "Jefferson y Alejandra Fandiño",
             "Leonel y Sandra Amado",
             "Mauricio y Johana Ramírez",
             "Oscar y Natalia Guzmán",
-            "Ps. Luis y Etelvina Ríos",
+            "Prs. Luis y Etelvina Ríos",
             "Raul y Paola Mora",
             "Sergio y Maribel Espinosa",
             "Wilson y Jenny Sanchez",
@@ -112,11 +120,12 @@
       ]
     },
     {
-      "name": "Prs. Alonso",
+      "name": "Prs. Alain y Anita Alonso",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Alejandro y Katherine Bonilla",
+          "members": [
+            "Alejandro y Katherine Bonilla",
             "Alexander y Constanza Fajardo",
             "Andrés y Gabriela Gómez",
             "Farut y Constanza Varón",
@@ -133,11 +142,12 @@
       ]
     },
     {
-      "name": "Prs. Mora",
+      "name": "Prs. Alfredo y Perla Doris Mora",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Alex Leon y Andrea Manrique",
+          "members": [
+            "Alex Leon y Andrea Manrique",
             "Alexander Astudillo y Ivon Pacheco",
             "Carlos Mendez y Luzdary Guerero",
             "Daniel Garzon y Liliana Herrera",
@@ -147,41 +157,52 @@
             "Leonardo Garcia y Gloria Parra",
             "Luis Leon y Alexandra Suarez",
             "Mario Saldarriaga y Yury Chavarro",
-            "Ps. Antonio  Farfan y P. Tatiana Bustos",
-            "Ps. Rocio Soto",
+            "Prs. Antonio  Farfan y P. Tatiana Bustos",
+            "Pra. Rocio Soto",
             "Walter Guerrero y Viviana Linares"
           ]
         }
       ]
     },
     {
-      "name": "Prs. De Boer",
+      "name": "Prs. Joshua y Michelle De Boer",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Álvaro & Greicy Ospina",
+          "members": [
+            "Camilo y Karol Hernández",
             "Eddwin & Patricia Muñoz",
             "Felipe y Mayerly Melo",
             "Francisco & Dámaris Ortiz",
             "Fredy & Angela Brito",
-            "Grupo 2",
             "Leonardo & Ana María López",
             "Leonardo e Isned Pardo",
             "Luis Felipe y Mallerly Romero",
             "Pedro & Erika Guaita",
-            "Ps José A. & Sandra Riveros",
-            "Ps Julio & Adriana Corva",
+            "Prs. José A. & Sandra Riveros",
+            "Prs. Julio & Adriana Corva",
             "Roverg & Mary Giraldo"
+          ]
+        },
+        {
+          "name": "Equipo multiplicación",
+          "members": [
+            "Alcira Martínez",
+            "Daniel & Deisy Vásquez",
+            "Julián & Carol Lombana",
+            "Mayerly Montes",
+            "Wilson & Eliana Jiménez"
           ]
         }
       ]
     },
     {
-      "name": "Prs. Espinosa",
+      "name": "Prs. Jhon y Angela Espinosa",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Alejandro y Sandra Rodríguez",
+          "members": [
+            "Alejandro y Sandra Rodríguez",
             "Andrés y Margarita Gutiérrez",
             "Ángel y Elna Suárez",
             "Arley y Diana Urueña",
@@ -191,20 +212,21 @@
             "Julio y Gina Gómez",
             "Manuel y Yeny Rodríguez",
             "Oscar y Yalila Cubides",
-            "Ps. Alfredo y Ángela Nivia",
-            "Ps. Andrés y Carola Solano",
-            "Ps. Saúl y Clara Sánchez",
+            "Prs. Alfredo y Ángela Nivia",
+            "Prs. Andrés y Carola Solano",
+            "Prs. Saúl y Clara Sánchez",
             "Stefania Espinosa"
           ]
         }
       ]
     },
     {
-      "name": "Prs. Ordoñez",
+      "name": "Prs. Jahems y Esneth Ordoñez",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Andres y Judith Guzman",
+          "members": [
+            "Andres y Judith Guzman",
             "Cesar y María Isabel Medina",
             "Daniel y Mariana Duran",
             "Diego y Maria Rojas",
@@ -214,19 +236,20 @@
             "Jouseph y Viviana Rodríguez",
             "Manuel y Maireth Rentería",
             "Mauricio y Monica Patino",
-            "P. Giovanny y Andrea Santamaria",
-            "P. Jonathan y Tatiana Hernandez",
+            "Prs. Giovanny y Andrea Santamaria",
+            "Prs. Jonathan y Tatiana Hernandez",
             "Samir y Ana Vera"
           ]
         }
       ]
     },
     {
-      "name": "Prs. Castañeda",
+      "name": "Prs. Orlando y Ruth Jimena Castañeda",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Carlos y Yadila Gutierrez",
+          "members": [
+            "Carlos y Yadila Gutierrez",
             "Edicson y Claudia Pérez",
             "Fernando y Amparo Rojas",
             "Freddy y Milena Beltrán",
@@ -234,8 +257,8 @@
             "Miguel y Heidy Alarcón",
             "Nelson y Stella Ramirez",
             "Oscar y Adriana Cupa",
-            "Ps. Jose y Jneth Rubio",
-            "Ps. Rogelio y Maritza Pinilla",
+            "Prs. Jose y Jneth Rubio",
+            "Prs. Rogelio y Maritza Pinilla",
             "William y Sandra Huertas",
             "Yiovanni y Sandra Lopez"
           ]
@@ -243,11 +266,12 @@
       ]
     },
     {
-      "name": "Prs. Ramos",
+      "name": "Prs. Fernando y Clara Ramos",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["Aldemar y Carolina Higuera",
+          "members": [
+            "Aldemar y Carolina Higuera",
             "Alfredo y Diana Torres",
             "⁠Edgar y claudia pintor",
             "Edwin y Diana Riaño",
@@ -263,14 +287,16 @@
         },
         {
           "name": "Equipo multiplicación",
-          "members": ["Juan y Cristina Sanabria",
+          "members": [
+            "Juan y Cristina Sanabria",
             "Miguel y Bibiana Pavez",
-            "Ps Marina Moreno"
+            "Pra. Marina Moreno"
           ]
         },
         {
           "name": "Equipo jovenes",
-          "members": ["Alejandra segura ",
+          "members": [
+            "Alejandra segura ",
             "Camila Bohórquez ",
             "Cristhian Espinosa ",
             "Daniela Torres ",
@@ -289,7 +315,8 @@
       "teams": [
         {
           "name": "Equipo principal",
-          "members": ["⁠Daniel y Carolina Mantilla ",
+          "members": [
+            "⁠Daniel y Carolina Mantilla ",
             "⁠Daniela Bustos",
             "Estevan y Katherine García ",
             "Felipe y Diana Beltrán ",
