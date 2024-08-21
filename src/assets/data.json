@@ -30,7 +30,6 @@
             "Jeofreddy Alvarez y Julissa Rojas",
             "Josue Munar y Camila Pabón",
             "Juan de la Cruz",
-            "Juan Sebastián Rodríguez y Gina Ramírez",
             "Pra. Elizabeth Berrios",
             "Saida Calderón",
             "Samuel Romero y Katerin Gil",
@@ -268,27 +267,10 @@
       ]
     },
     {
-      "name": "Prs. Orlando y Ruth Jimena Castañeda",
+      "name": "Prs. Juan Sebastian y Gina Rodriguez ",
       "teams": [
         {
           "name": "Equipo principal",
-          "members": [
-            "Carlos y Yadila Gutierrez",
-            "Edicson y Claudia Pérez",
-            "Fernando y Amparo Rojas",
-            "Freddy y Milena Beltrán",
-            "Giovanny y Diana Velandia",
-            "Miguel y Heidy Alarcón",
-            "Nelson y Stella Ramirez",
-            "Oscar y Adriana Cupa",
-            "Prs. Jose y Jneth Rubio",
-            "Prs. Rogelio y Maritza Pinilla",
-            "William y Sandra Huertas",
-            "Yiovanni y Sandra Lopez"
-          ]
-        },
-        {
-          "name": "Equipo multiplicación",
           "members": [
             "Alexander y Rocio Rojas",
             "Andres y Gloria Hurtado",
@@ -303,8 +285,31 @@
             "Nidia Garcia",
             "Norma Celis",
             "Shalom Fuquene",
-            "William y Gloria Varon"
+            "William y Gloria Varon",
+            "-------------------------",
+            "Alejandra Sastoque",
+            "Angie Cortez",
+            "Camila Cendales",
+            "Carlos y Milena García",
+            "Carolina Riveros",
+            "Edwin y Diana Vargas",
+            "Juan Camilo Monroy",
+            "Juan Felipe Ramírez",
+            "Juan Sebastián Muñoz",
+            "Laura Daniela González",
+            "Marcela Machado",
+            "Nathalia Pulido",
+            "Nicolás y Erika Vargas",
+            "Paula Mendez",
+            "Paula Molano",
+            "Vanesa Galindo Garcia",
+            "Yeison Saavedra",
+            "Yesid Rodríguez"
           ]
+        },
+        {
+          "name": "Equipo multiplicación",
+          "members": []
         }
       ]
     },
@@ -363,15 +368,19 @@
         {
           "name": "Equipo principal",
           "members": [
-            "⁠Daniel y Carolina Mantilla ",
-            "⁠Daniela Bustos",
-            "Estevan y Katherine García ",
-            "Felipe y Diana Beltrán ",
-            "Fernando y Sandra Rivera ",
-            "German y Claudia Ballesteros ",
-            "⁠Juan Camilo y Yeimy Ochoa ",
-            "⁠Julian González ",
-            "⁠Uriel y Jeimy Novoa "
+            "Prs. Jose y Janeth Rubio",
+            "Prs. Rogelio y Maritza Pinilla",
+            "Carlos y Yadila Gutierrez",
+            "Edicson y Claudia Pérez",
+            "Fernando y Amparo Rojas",
+            "Freddy y Milena Beltrán",
+            "Giovanny y Diana Velandia",
+            "Miguel y Heidy Alarcón",
+            "Nelson y Stella Ramirez",
+            "Oscar y Adriana Cupa",
+            "William y Sandra Huertas",
+            "Yiovanni y Sandra Lopez",
+            "Deiby y Paola Ochoa"
           ]
         }
       ]
